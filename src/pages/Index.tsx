@@ -1,16 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ClassCard from "@/components/ClassCard";
+import classBanner from "@/assets/class-banner.jpg";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const classes = ["CSE A", "CSE B", "CSE C", "CSE D"];
+
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background py-12 px-4">
+      <h1 className="text-4xl font-bold text-primary text-center mb-10">
+        Our Lovable Classes
+      </h1>
+      <div className="flex flex-wrap justify-center gap-6">
+        {classes.map((cls) => (
+          <ClassCard key={cls} name={cls} image={classBanner} />
+        ))}
+      </div>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
