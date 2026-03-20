@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   base: '/cute-class-register/',
-  plugins: [react()],
+  plugins: [react()]
 })
